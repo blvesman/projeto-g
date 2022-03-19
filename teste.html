@@ -1,0 +1,1567 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TQGKT9H');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="76x76" href="https://precodoscombustiveis.com.br/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="https://precodoscombustiveis.com.br/img/gaspass_marca.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="7cPfRoO4NwAQCWEdRBmoAYXGeqScWBeHZGm8MbRt">
+
+<title>Preço dos combustíveis - Gaspass</title>
+<meta name="description" content="Confira o pre&ccedil;o dos combust&iacute;veis (gasolina, &aacute;lcool, diesel) no Brasil. Valor por litro em reais. Veja os postos no mapa ou navegue atrav&eacute;s da lista.">
+<meta name="keywords" content="preço, combustíveis, gasolina, álcool, diesel, brasil, estados, cidades, postos, bairros, litro, litros, real, reais">
+<meta name="theme-color" content="#161825">
+<meta property="og:title" content="Preço dos combustíveis - Gaspass" />
+<meta property="og:description" content="Confira os pre&ccedil;o dos combust&iacute;veis na sua localidade" />
+<meta property="og:url" content="https://precodoscombustiveis.com.br" />
+<meta property="og:image" content="https://api.gaspass.com.br/assets/img/cover.png" />
+
+
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@gaspassfuel" />
+    <meta name="twitter:creator" content="@gaspassfuel" />
+    <meta name="twitter:image" content="https://precodoscombustiveis.com.br/img/gaspass_marca.png"/>
+
+
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113363189-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-113363189-1');
+    </script>
+
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-1511531556004960",
+    enable_page_level_ads: true
+    });
+    </script> -->
+    <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+
+    
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-app.js"></script>
+    
+
+    <script src="https://www.gstatic.com/firebasejs/ui/3.5.2/firebase-ui-auth__pt_br.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAa6umHHsUUEL8J4rj8iqf6z0_YTG6OkjU",
+            authDomain: "preco-dos-combustiveis.firebaseapp.com",
+            databaseURL: "https://preco-dos-combustiveis.firebaseio.com",
+            projectId: "preco-dos-combustiveis",
+            storageBucket: "preco-dos-combustiveis.appspot.com",
+            messagingSenderId: "985319645233"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+
+    <script type="text/javascript">
+        // FirebaseUI config.
+        var uiConfig = {
+            signInSuccessUrl: 'https://precodoscombustiveis.com.br/pt-BR',
+            signInOptions: [
+                // Leave the lines as is for the providers you want to offer your users.
+                firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+                firebase.auth.FacebookAuthProvider.PROVIDER_ID/*,
+                firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+                firebase.auth.GithubAuthProvider.PROVIDER_ID,
+                firebase.auth.EmailAuthProvider.PROVIDER_ID,
+                firebase.auth.PhoneAuthProvider.PROVIDER_ID,
+                firebaseui.auth.AnonymousAuthProvider.PROVIDER_ID*/
+            ],
+            // tosUrl and privacyPolicyUrl accept either url string or a callback
+            // function.
+            // Terms of service url/callback.
+            tosUrl: 'https://precodoscombustiveis.com.br/user-terms',
+            // Privacy policy url/callback.
+            privacyPolicyUrl: function() {
+                window.location.assign('https://precodoscombustiveis.com.br/privacy-politics');
+            }
+        };
+
+        // Initialize the FirebaseUI Widget using Firebase.
+        var ui = new firebaseui.auth.AuthUI(firebase.auth());
+        // The start method will wait until the DOM is loaded.
+        // ui.start('#firebaseui-auth-container', uiConfig);
+    </script>
+
+    
+
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <script type="text/javascript">
+        initApp = function() {
+            firebase.auth().onAuthStateChanged(function(user) {
+                if (user) {
+                    // User is signed in.
+                    var displayName = user.displayName;
+                    var email = user.email;
+                    var emailVerified = user.emailVerified;
+                    var photoURL = user.photoURL;
+                    var uid = user.uid;
+                    var phoneNumber = user.phoneNumber;
+                    var providerData = user.providerData;
+                    user.getIdToken().then(function(accessToken) {
+                        if (document.getElementById('sign-in-status')) {
+                            document.getElementById('sign-in-status').textContent = 'Signed in';
+                        }
+                        if (document.getElementById('sign-in')) {
+                            document.getElementById('sign-in').textContent = 'Sign out';
+                        }
+                        if (document.getElementById('account-details')) {
+                            document.getElementById('account-details').textContent = JSON.stringify({
+                                displayName: displayName,
+                                email: emailauth
+                            }, null, '  ');
+                        }
+                    });
+                } else {
+                    // User is signed out.
+                    /*document.getElementById('sign-in-status').textContent = 'Signed out';
+                    document.getElementById('sign-in').textContent = 'Sign in';
+                    document.getElementById('account-details').textContent = 'null';*/
+                }
+            }, function(error) {
+                console.log(error);
+            });
+        };
+
+        window.addEventListener('load', function() {
+            initApp()
+        });
+    </script>
+
+
+    <script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5c4219a180b4ba001b1ee240&product=inline-share-buttons"></script>
+
+    <link href="https://precodoscombustiveis.com.br/css/app.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <link rel="shortcut icon" type="image/png" href="https://precodoscombustiveis.com.br/img/gaspass_marca.png"/>
+
+    <!-- Theme style -->
+    
+<!-- Google Font: Source Sans Pro -->
+    <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    
+    
+
+    <link rel="apple-touch-icon" sizes="76x76" href="https://precodoscombustiveis.com.br/img/gaspass_marca.png">
+    <link rel="icon" type="image/png" href="https://precodoscombustiveis.com.br/img/gaspass_marca.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <!-- CSS Files -->
+    
+    <link href="https://precodoscombustiveis.com.br/css/now-ui-kit.min.pro.css" rel="stylesheet" />
+    <link href="https://precodoscombustiveis.com.br/css/now-ui-kit.css?v=1.2.0" rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    
+
+    <link href="https://precodoscombustiveis.com.br/css/gaspass.css" rel="stylesheet" />
+
+    <style type="text/css">
+        .speech-bubble {
+            position: relative;
+            background: #f2ae07;
+            border-radius: .4em;
+        }
+
+        .speech-bubble:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 0;
+            height: 0;
+            border: 26px solid transparent;
+            border-right-color: #f2ae07;
+            border-left: 0;
+            border-top: 0;
+            margin-top: -13px;
+            margin-left: -26px;
+        }
+        .feedback {
+            background-color : #fdb808;
+            color: #111;
+            padding: 10px 20px;
+            border-radius: 4px;
+            border-color: #e4a306;
+        }
+
+        #mybutton {
+            position: fixed;
+            /*bottom: -4px;*/
+            top: 45%;
+            left: 10px;
+            z-index: 999;
+        }
+        @media( max-width: 700px){
+            #mybutton {
+                display: none;
+                position: fixed;
+                /*bottom: -4px;*/
+                top: 45%;
+                left: 10px;
+                z-index: 999;
+            }
+        }
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #333 !important;
+            opacity: 1; /* Firefox */
+        }
+
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: #333 !important;
+        }
+
+        ::-ms-input-placeholder { /* Microsoft Edge */
+            color: #333 !important;
+        }
+    </style>
+
+    </head>
+
+<body class="index-page sidebar-collapse">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQGKT9H"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Navbar -->
+            <nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-transparent" color-on-scroll="200">
+    
+    <div class="container">
+        <div class="navbar-translate">
+            <a class="navbar-brand d-flex flex-row justify-content-center" href="/pt-BR" id="logo">
+                <img src="https://precodoscombustiveis.com.br/img/logo.svg" />
+                <span class="color-accent align-self-center ml-3" style="text-transform: none"><b>Preço dos</b>&nbsp;Combustíveis</span>
+            </a>
+            <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-bar top-bar"></span>
+                <span class="navbar-toggler-bar middle-bar"></span>
+                <span class="navbar-toggler-bar bottom-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="./assets/img/blurred-image-1.jpg">
+            <ul class="navbar-nav">
+                
+                
+                
+                
+                
+                <div id="sign-in_custom">
+                    <li class="nav-item">
+                        <a class="nav-link " href="https://precodoscombustiveis.com.br/login">
+                            <i class="now-ui-icons users_single-02"></i>
+                            Entrar
+                        </a>
+                    </li>
+                </div>
+                <div id="sign-out_custom">
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <span id="username"></span>
+                            <span class="caret"></span>
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            
+                            <a href="#" class="dropdown-item  disabled" title="Em Construção" alt="Em Construção" disabled style="">Painel</a>
+                            <a href="#" class="dropdown-item  disabled" title="Em Construção" alt="Em Construção" disabled style="">Perfil</a>
+                            <a class="dropdown-item mouse-hover" onclick="logout()">Sair</a>
+
+                            
+                        </div>
+                    </li>
+                </div>
+                
+
+
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" data-toggle="dropdown">
+                        
+                                                    <p>Portugues</p>
+                                                </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink1">
+                        <a class="dropdown-item mouse-hover" onclick="setLocale('en')">
+                            Inglês
+                        </a>
+                        <a class="dropdown-item mouse-hover" onclick="setLocale('es')">
+                            Espanhol
+                        </a>
+                        <a class="dropdown-item mouse-hover" onclick="setLocale('pt-BR')">
+                            Portugues
+                        </a>
+                    </div>
+                </li>
+                                <li class="nav-item">
+                    <a class="nav-link mouse-hover" onclick="toggleMenuSearchBox()">
+                        <i class="fa fa-search"></i>
+                    </a>
+                </li>
+                                <li class="nav-item">
+                    <a class="nav-link" title="Baixe o app Android" data-placement="bottom" href="https://play.google.com/store/apps/details?id=br.com.pdc" target="_blank">
+                        <i class="fab fa-android"></i>
+                        <p class="d-lg-none d-xl-none">Android</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" title="Baixe o app iOS" data-placement="bottom" href="https://itunes.apple.com/br/app/gaspass/id1438985142" target="_blank">
+                        <i class="fab fa-apple"></i>
+                        <p class="d-lg-none d-xl-none">Apple</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" title="Siga-nos!" data-placement="bottom" href="https://twitter.com/precombustiveis" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                        <p class="d-lg-none d-xl-none">Twitter</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" title="Curta nossa página!" data-placement="bottom" href="https://facebook.com/gaspassfuel" target="_blank">
+                        <i class="fab fa-facebook-square"></i>
+                        <p class="d-lg-none d-xl-none">Facebook</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" title="Confira!" data-placement="bottom" href="https://instagram.com/gaspassfuel" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                        <p class="d-lg-none d-xl-none">Instagram</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-placement="bottom" href="https://blog.gaspass.com.br/" target="_blank">
+                        <img style="width:16px;" src="https://precodoscombustiveis.com.br/img/icones__gaspass_iconeRegularBlack-duvida.svg" />
+                        &nbsp;&nbsp;Ajuda
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</nav>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+
+    <script>
+
+        var loged = 0;
+        /*-Firebase-*/
+        firebase.auth().onAuthStateChanged(function(u) {
+            console.log('auth menu');
+            if (u) {
+                user = u;
+                // console.log(user);
+                $('#sign-in_custom').hide();
+                $('#sign-out_custom').show();
+                if(user.photoURL != null){
+                    $('#username').html('<img src="'+user.photoURL+'" style="border-radius:50%; width:30px; height:30px;">&nbsp;&nbsp;&nbsp;'+user.displayName.substring(0,25));
+                    $('#picturephotouser').attr('src',''+user.photoURL+'');
+                }else{
+                    $('#username').html(user.displayName.substring(0,25));
+                    $('#picturephotouser').attr('src','https://precodoscombustiveis.com.br/images/placeholder_user.jpg');
+                }
+                if(user.displayName.length > 25) $('#username').append("...");
+                /*$('#containerSearch').addClass('col-md-5');*/
+                /*$('#containerSearch').removeClass('col-md-6');*/
+                var c = "";
+                if(user.photoURL != null) c += '<img src="'+user.photoURL+'" style="border-radius:50%; width:52px; height:52px; margin-bottom:10px;"><br>';
+                c += '<b>'+user.displayName+'</b><br>'+user.email;
+                /*$('#username2').html(c);*/
+                user.getIdToken().then(function(datawithtoken) {
+                    // console.log(datawithtoken);
+                    var settings = {
+                        "async": true,
+                        "crossDomain": true,
+                        "url": "https://api.gaspass.com.br/v2/login",
+                        "method": "GET",
+                        "headers": {
+                            "Authorization": "Basic "+btoa(datawithtoken+':'),
+                            "cache-control": "no-cache",
+                            "Postman-Token": "12370737-5d05-42ae-8438-a3fb66a2aa24"
+                        }
+                    }
+
+                    $.ajax(settings).done(function (response) {
+                        loged = 1;
+                        console.log('logged');
+                        // console.log(response);
+                    });
+                });
+                $('#form_postcomment').show();
+            } else {
+                console.log("no user");
+                $('#form_postcomment').hide();
+                loged = 0;
+            }
+        });
+
+        function logout(){
+            firebase.auth().signOut();
+            //location.reload();
+            user = null;
+            console.log(user);
+            $('#sign-in_custom').show();
+            $('#sign-out_custom').hide();
+            $('#username').html("");
+            /*$('#containerSearch').removeClass('col-md-5');*/
+            /*$('#containerSearch').addClass('col-md-6');*/
+            /*$('#username2').html("");*/
+        }
+
+
+        // var x = document.getElementById("myLink").disabled;
+        var y = document.getElementsByClassName('disabled').disabled;
+    </script>
+<!-- Modal -->
+<div class="modal fade bd-example-modal-sm" id="exampleModal_feedback" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Gostou do novo site?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="modal_feedback_body">
+                <p>Diga como está sua experiencia.</p>
+                <form>
+                    <div class="form-group">
+                        
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu Email">
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputNota">Nota</label><br>
+                        <i class="far fa-star" id="star_1"></i>
+                        <i class="far fa-star" id="star_2"></i>
+                        <i class="far fa-star" id="star_3"></i>
+                        <i class="far fa-star" id="star_4"></i>
+                        <i class="far fa-star" id="star_5"></i>
+                    </div>
+                    <div class="form-group">
+                        
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">Comentário</textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="btn_close_feedback" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <button type="button" id="btn_submit_feedback" class="btn btn-primary">Enviar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="wrapper pb-5" id="ListCountry">
+
+        <div class="page-header page-header-small" style="min-height:20vh; max-height:300px; transition: 0.5s;">
+    <div class="page-header-image" data-parallax="true" style="background: url(https://precodoscombustiveis.com.br/img/gasbg.jpg); box-shadow: inset 0 0 0 1000px rgba(22,24,37,.8); transform: translate3d(0px, 0px, 0px);"></div>
+    <div class="content-center" style="max-width: 100%;">
+
+        <div class="container" id="dowloadAppBox">
+            <h3 class="title">Baixe o app</h3>
+            <div class="text-center">
+                <a href="https://play.google.com/store/apps/details?id=br.com.precodoscombustiveis.pdc" class="btn btn-success btn-round" target="_blank">
+                    <i class="fab fa-android fa-3x"></i>
+                </a>
+                <a href="https://itunes.apple.com/br/app/gaspass/id1438985142" class="btn btn-info btn-round" target="_blank">
+                    <i class="fab fa-apple fa-3x"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="container mt-2" id="menuSearchBox" style="display:none;">
+            <div class="offset-md-2 col-md-8 offset-1 col-10">
+    <div class="card card-raised card-form-horizontal card-plain" data-background-color>
+        <div class="card-body">
+
+            <div class="row" id="searchContainer">
+                <div class="col-md-12 d-flex flex-column align-items-end d-md-flex flex-md-row">
+                    <span class="fa fa-circle-notch fa-spin" id="searchLoading" style="display:none; position:absolute;left:35px;"></span>
+                    <input type="text" value="" id="HomeHeaderInput"  placeholder="Pesquise países, estados, cidades..."  class="form-control" autocomplete="family-name" />
+                    <a href="#" class="dropdown-toggle show d-none d-md-flex align-items-center justify-content-center mr-0 mr-md-5" id="HomeHeaderFuelDropdown" data-toggle="dropdown" aria-expanded="false">
+                                                    Gasolina
+                                                </a>
+                    <div class="dropdown-menu" aria-labelledby="HomeHeaderFuelDropdown">
+                        <a class="dropdown-item mouse-hover" onclick="setFuel('1', this.text)">
+                            Gasolina
+                        </a>
+                        <a class="dropdown-item mouse-hover" onclick="setFuel('2', this.text)">
+                            Etanol
+                        </a>
+                        <a class="dropdown-item mouse-hover" onclick="setFuel('3', this.text)">
+                            Diesel
+                        </a>
+                        <a class="dropdown-item mouse-hover" onclick="setFuel('4', this.text)">
+                            Gnv
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div id="searchMessage" style="display:none;padding-top:30px;"></div>
+                    
+
+                    <div id="autocomplete" style="display:none;max-height:300px;overflow-y:auto;">
+                        <div class="row">
+                            <div class="col-md-4" id="autocompleteDivCity">
+                                <table class="table table-borderless">
+                                    <thead><th class="text-left">Cidade</th></thead>
+                                    <tbody id="autocompleteTableCity"></tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-4" id="autocompleteDivState">
+                                <table class="table table-borderless">
+                                    <thead><th class="text-left">Estado</th></thead>
+                                    <tbody id="autocompleteTableState"></tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-4" id="autocompleteDivCountry">
+                                <table class="table table-borderless">
+                                    <thead><th class="text-left">País</th></thead>
+                                    <tbody id="autocompleteTableCountry"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+        </div>
+
+    </div>
+</div>
+
+        <div class="row pt-3">
+            <div class="offset-xl-1 col-xl-10 col-12">
+                                                        <nav aria-label="breadcrumb" role="navigation">
+    <ol class="breadcrumb">
+                                    <li class="breadcrumb-item " ><a href="https://precodoscombustiveis.com.br/pt-BR">Home</a></li>
+                            <li class="breadcrumb-item " ><a href="https://precodoscombustiveis.com.br/pt-BR/country/Brasil/33">Brasil</a></li>
+                            <li class="breadcrumb-item " ><a href="https://precodoscombustiveis.com.br/pt-BR/state/Brasil/Sao-Paulo/26">São Paulo</a></li>
+                            <li class="breadcrumb-item  active" aria-current="page">São Paulo </li>
+                        </ol>
+</nav>                            </div>
+                            <div class="offset-xl-1 col-xl-10 col-12 px-0" style="min-height: 100px;">
+                    <!-- newgaspass -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1511531556004960"
+     data-ad-slot="5753030534"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+
+<style type="text/css">
+	ins.adsbygoogle {
+    	height: 100px;
+	}
+</style>
+
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-1511531556004960"
+    });
+    </script>
+                </div>
+                    </div>
+
+        <div class="row">
+
+            <div class="offset-xl-1 col-xl-7 col-12">
+
+                <div class="card card-profile mt-1">
+
+                    <div class="card-body mt-0 pb-5">
+                        <h3 class="mb-4">São Paulo</h3>
+
+                                                    <div class="row">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/a_-e_-carvalho/6382" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="A. E. Carvalho" title="A. E. Carvalho">
+                                                 A. E. Carvalho  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/aclimacao/4163" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Aclimação" title="Aclimação">
+                                                 Aclimação  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">14</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/aeroporto/7193" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Aeroporto" title="Aeroporto">
+                                                 Aeroporto  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">4</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/agua-branca/4100" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Àgua Branca" title="Àgua Branca">
+                                                 Àgua Branca  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">15</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/agua-fria/4147" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Água Fria" title="Água Fria">
+                                                 Água Fria  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">5</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/agua-rasa/38949" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Água Rasa" title="Água Rasa">
+                                                 Água Rasa  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/agua-rasa/4067" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Água Rasa" title="Água Rasa">
+                                                 Água Rasa  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">8</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/alto-da-boa-vista/6371" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Alto da Boa Vista" title="Alto da Boa Vista">
+                                                 Alto da Boa ...&nbsp; &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/alto-da-lapa/4096" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Alto da Lapa" title="Alto da Lapa">
+                                                 Alto da Lapa  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">8</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/alto-da-lapa/40227" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Alto da Lapa" title="Alto da Lapa">
+                                                 Alto da Lapa  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/alto-da-mooca/4032" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Alto da Mooca" title="Alto da Mooca">
+                                                 Alto da Mooca  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">4</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/alto-de-pinheiros/4172" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Alto de Pinheiros" title="Alto de Pinheiros">
+                                                 Alto de Pinh...&nbsp; &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">7</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/alto-do-mandaqui/7406" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Alto do Mandaqui" title="Alto do Mandaqui">
+                                                 Alto do Mand...&nbsp; &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/alto-do-pari/9866" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Alto do Pari" title="Alto do Pari">
+                                                 Alto do Pari  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/alto-dos-pinheiros/7407" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Alto dos Pinheiros" title="Alto dos Pinheiros">
+                                                 Alto dos Pin...&nbsp; &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/americanopolis/9856" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Americanopolis" title="Americanopolis">
+                                                 Americanopolis  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/americanopolis/40231" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Americanópolis" title="Americanópolis">
+                                                 Americanópolis  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/americanopolis/37718" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Americanópolis" title="Americanópolis">
+                                                 Americanópolis  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/armenia/7153" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Armenia" title="Armenia">
+                                                 Armenia  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/arthur-alvim/10894" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Arthur Alvim" title="Arthur Alvim">
+                                                 Arthur Alvim  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/artur-alvim/4179" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Artur Alvim" title="Artur Alvim">
+                                                 Artur Alvim  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">4</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/artur-alvim/40026" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Artur Alvim" title="Artur Alvim">
+                                                 Artur Alvim  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/bairro-do-alem/7410" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Bairro do Alem" title="Bairro do Alem">
+                                                 Bairro do Alem  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">2</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/bairro-limao/12157" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Bairro Limao" title="Bairro Limao">
+                                                 Bairro Limao  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/balneario-mar-paulista/9690" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Balneario Mar Paulista" title="Balneario Mar Paulista">
+                                                 Balneario Ma...&nbsp; &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">3</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/barra-funda/4020" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Barra Funda" title="Barra Funda">
+                                                 Barra Funda  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">30</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/barro-branco/7390" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Barro Branco" title="Barro Branco">
+                                                 Barro Branco  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/bela-alianca/4057" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Bela Aliança" title="Bela Aliança">
+                                                 Bela Aliança  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/bela-vista/12505" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Bela Vista" title="Bela Vista">
+                                                 Bela Vista  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/bela-vista/4081" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Bela Vista" title="Bela Vista">
+                                                 Bela Vista  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">35</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/belem/6393" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Belem" title="Belem">
+                                                 Belem  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">5</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/belenzinho/3999" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Belenzinho" title="Belenzinho">
+                                                 Belenzinho  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">15</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/boacava/7196" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Boaçava" title="Boaçava">
+                                                 Boaçava  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/bom-retiro/4080" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Bom Retiro" title="Bom Retiro">
+                                                 Bom Retiro  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">13</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/bosque-da-saude/38527" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Bosque da Saúde" title="Bosque da Saúde">
+                                                 Bosque da Sa...&nbsp; &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/bosque-da-saude/4048" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Bosque da Saúde" title="Bosque da Saúde">
+                                                 Bosque da Sa...&nbsp; &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">6</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/bosque-da-saude/38933" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Bosque da Saúde" title="Bosque da Saúde">
+                                                 Bosque da Sa...&nbsp; &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/bras/3997" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Brás" title="Brás">
+                                                 Brás  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">22</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/brasilandia/6350" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Brasilandia" title="Brasilandia">
+                                                 Brasilandia  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/brooklin/4149" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Brooklin" title="Brooklin">
+                                                 Brooklin  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">13</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/brooklin/38847" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Brooklin" title="Brooklin">
+                                                 Brooklin  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/brooklin-novo/4099" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Brooklin Novo" title="Brooklin Novo">
+                                                 Brooklin Novo  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/brooklin-paulista/37096" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Brooklin Paulista" title="Brooklin Paulista">
+                                                 Brooklin Pau...&nbsp; &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/brooklin-paulista/6325" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Brooklin Paulista" title="Brooklin Paulista">
+                                                 Brooklin Pau...&nbsp; &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">8</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/butanta/4053" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Butantã" title="Butantã">
+                                                 Butantã  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">40</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/butanta/38540" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Butantã" title="Butantã">
+                                                 Butantã  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/c_-redendo/7175" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="C. Redendo" title="C. Redendo">
+                                                 C. Redendo  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">2</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/c_-socorro/3994" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="C. Socorro" title="C. Socorro">
+                                                 C. Socorro  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/cambuci/4117" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Cambucí" title="Cambucí">
+                                                 Cambucí  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">21</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/cambuci/39393" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Cambuci" title="Cambuci">
+                                                 Cambuci  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/cambuci/37599" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Cambuci" title="Cambuci">
+                                                 Cambuci  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/campo-belo/4183" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Campo Belo" title="Campo Belo">
+                                                 Campo Belo  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">11</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/campo-grande/6329" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Campo Grande" title="Campo Grande">
+                                                 Campo Grande  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">3</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/campo-limpo/6338" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Campo Limpo" title="Campo Limpo">
+                                                 Campo Limpo  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">10</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/campos-eliseos/4131" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Campos Elíseos" title="Campos Elíseos">
+                                                 Campos Elíseos  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">7</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/cangaia/7370" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Cangaia" title="Cangaia">
+                                                 Cangaia  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/cangaiba/4060" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Cangaíba" title="Cangaíba">
+                                                 Cangaíba  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">6</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/caninde/6415" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Canindé" title="Canindé">
+                                                 Canindé  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">5</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/capao-redondo/4021" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Capão Redondo" title="Capão Redondo">
+                                                 Capão Redondo  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">6</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/capela-do-socorro/9499" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Capela do Socorro" title="Capela do Socorro">
+                                                 Capela do So...&nbsp; &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">2</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/carandiru/4182" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Carandiru" title="Carandiru">
+                                                 Carandiru  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">5</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/casa-verde/39872" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Casa Verde" title="Casa Verde">
+                                                 Casa Verde  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/casa-verde/4006" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Casa Verde" title="Casa Verde">
+                                                 Casa Verde  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">31</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/casa-verde---santana/4018" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Casa Verde - Santana" title="Casa Verde - Santana">
+                                                 Casa Verde -...&nbsp; &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/casa-verde-alta/7154" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Casa Verde Alta" title="Casa Verde Alta">
+                                                 Casa Verde Alta  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/catumbi/10273" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Catumbi" title="Catumbi">
+                                                 Catumbi  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/caxingui/4158" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Caxingui" title="Caxingui">
+                                                 Caxingui  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">3</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/centro/4123" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Centro" title="Centro">
+                                                 Centro  &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">9</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/cerqueira-cesar/4184" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Cerqueira César" title="Cerqueira César">
+                                                 &nbsp; &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">8</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/chac_-sto-antonio/6327" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Chac. Sto Antonio" title="Chac. Sto Antonio">
+                                                 Chac. Sto An...&nbsp; &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                                                                <div class="col-12 col-xl-3 col-md-6 justify-content-center station-hover" style="height:32px;">
+                                            <a href="https://precodoscombustiveis.com.br/pt-br/district/brasil/sao-paulo/sao-paulo/chacara-belenzinho/4121" style="width:100%;" class="list-item d-flex align-items-center justify-content-center" alt="Chacara Belenzinho" title="Chacara Belenzinho">
+                                                 Chacara Bele...&nbsp; &nbsp;&nbsp;<span class="bagde badge-pill badge-dark" style="font-size:10px;">1</span>
+                                            </a>
+                                        </div>
+                                                                                                </div>
+                                <div class="row">
+                                    <div class="mt-5 p-2 justify-content-center color-primary">
+                                    <ul class="pagination" role="navigation">
+        
+                    <li class="page-item disabled" aria-disabled="true" aria-label="&laquo; Anterior">
+                <span class="page-link" aria-hidden="true">&lsaquo;</span>
+            </li>
+        
+        
+                    
+            
+            
+                                                                        <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
+                                                                                <li class="page-item"><a class="page-link" href="https://precodoscombustiveis.com.br/pt-br/city/brasil/sao-paulo/sao-paulo/3830?page=2">2</a></li>
+                                                                                <li class="page-item"><a class="page-link" href="https://precodoscombustiveis.com.br/pt-br/city/brasil/sao-paulo/sao-paulo/3830?page=3">3</a></li>
+                                                                                <li class="page-item"><a class="page-link" href="https://precodoscombustiveis.com.br/pt-br/city/brasil/sao-paulo/sao-paulo/3830?page=4">4</a></li>
+                                                                                <li class="page-item"><a class="page-link" href="https://precodoscombustiveis.com.br/pt-br/city/brasil/sao-paulo/sao-paulo/3830?page=5">5</a></li>
+                                                                                <li class="page-item"><a class="page-link" href="https://precodoscombustiveis.com.br/pt-br/city/brasil/sao-paulo/sao-paulo/3830?page=6">6</a></li>
+                                                                                <li class="page-item"><a class="page-link" href="https://precodoscombustiveis.com.br/pt-br/city/brasil/sao-paulo/sao-paulo/3830?page=7">7</a></li>
+                                                                                <li class="page-item"><a class="page-link" href="https://precodoscombustiveis.com.br/pt-br/city/brasil/sao-paulo/sao-paulo/3830?page=8">8</a></li>
+                                                                                <li class="page-item"><a class="page-link" href="https://precodoscombustiveis.com.br/pt-br/city/brasil/sao-paulo/sao-paulo/3830?page=9">9</a></li>
+                                                                                <li class="page-item"><a class="page-link" href="https://precodoscombustiveis.com.br/pt-br/city/brasil/sao-paulo/sao-paulo/3830?page=10">10</a></li>
+                                                        
+        
+                    <li class="page-item">
+                <a class="page-link" href="https://precodoscombustiveis.com.br/pt-br/city/brasil/sao-paulo/sao-paulo/3830?page=2" rel="next" aria-label="Próximo &raquo;">&rsaquo;</a>
+            </li>
+            </ul>
+
+                                </div>
+                            </div>
+                                            </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-xl-3 p-5 pr-md-5 pl-md-4 pt-md-2">
+                <h5 class="text-muted">Índice de preços Gaspass</h5>
+                <div class="card">
+        <div class="card-body" style="background:#f5f5f5">
+            <span class="category text-danger">Gasolina</span><br>
+            <span class="text-muted">Preço médio nos últimos 15 dias <br>em <b>São Paulo</b></span><br>
+            <span style="font-size:28px;">R$ 7.064</span>
+                            <p class="text-justify hover" style="text-justify:inter-word; min-height: 15px;"> <a href="https://precodoscombustiveis.com.br/pt-br/station/brasil/sao-paulo/sao-paulo/district/posto-imperatriz/11292" alt="Ir para o posto Posto Imperatriz" title="Ir para o posto Posto Imperatriz"> <span class="text-muted text-left float-left" style=" ">Menor preço:</span><span class="text-success text-right float-right font-weight-normal" style="font-size:18px;">R$ 6.379</span> </a> </p>
+                <p class="text-justify hover" style="text-justify:inter-word; min-height: 15px;"> <a href="https://precodoscombustiveis.com.br/pt-br/station/brasil/sao-paulo/sao-paulo/district/auto-posto-cinco-esquinas/14388" alt="Ir para o posto Auto Posto Cinco Esquinas" title="Ir para o posto Auto Posto Cinco Esquinas">  <span class="text-muted text-left float-left" style=" ">Maior preço:</span><span class="text-danger text-right float-right font-weight-normal" style="font-size:18px;">R$ 7.700</span> </a> </p>
+                        <br />
+        </div>
+    </div>
+                <div class="card">
+        <div class="card-body" style="background:#f5f5f5">
+            <span class="category text-success">Etanol</span><br>
+            <span class="text-muted">Preço médio nos últimos 15 dias <br>em <b>São Paulo</b></span><br>
+            <span style="font-size:28px;">R$ 4.838</span>
+                            <p class="text-justify hover" style="text-justify:inter-word; min-height: 15px;">  <a href="https://precodoscombustiveis.com.br/pt-br/station/brasil/sao-paulo/sao-paulo/district/posto-imperatriz/11292" alt="Ir para o posto Posto Imperatriz" title="Ir para o posto Posto Imperatriz"> <span class="text-muted text-left float-left" style=" ">Menor preço:</span><span class="text-success text-right float-right font-weight-normal" style="font-size:18px;">R$ 4.449</span> </a> </p>
+                <p class="text-justify hover" style="text-justify:inter-word; min-height: 15px;">  <a href="https://precodoscombustiveis.com.br/pt-br/station/brasil/sao-paulo/sao-paulo/district/servicentro-shell/14857" alt="Ir para o posto Servicentro Shell" title="Ir para o posto Servicentro Shell"> <span class="text-muted text-left float-left" style=" ">Maior preço:</span><span class="text-danger text-right float-right font-weight-normal" style="font-size:18px;">R$ 5.299</span> </a> </p>
+                        <br />
+        </div>
+    </div>
+                <div class="card">
+        <div class="card-body" style="background:#f5f5f5">
+            <span class="category text-warning">Diesel</span><br>
+            <span class="text-muted">Preço médio nos últimos 15 dias <br>em <b>São Paulo</b></span><br>
+            <span style="font-size:28px;">R$ 6.524</span>
+                            <p class="text-justify hover" style="text-justify:inter-word; min-height: 15px;">  <a href="https://precodoscombustiveis.com.br/pt-br/station/brasil/sao-paulo/sao-paulo/district/auto-posto-brasil-2005/14438" alt="Ir para o posto Auto Posto Brasil 2005" title="Ir para o posto Auto Posto Brasil 2005"> <span class="text-muted text-left float-left" style=" ">Menor preço:</span><span class="text-success text-right float-right font-weight-normal" style="font-size:18px;">R$ 5.799</span> </a></p>
+                <p class="text-justify hover" style="text-justify:inter-word; min-height: 15px;">  <a href="https://precodoscombustiveis.com.br/pt-br/station/brasil/sao-paulo/sao-paulo/district/auto-posto-dri/6231" alt="Ir para o posto Auto Posto Dri" title="Ir para o posto Auto Posto Dri"> <span class="text-muted text-left float-left" style=" ">Maior preço:</span><span class="text-danger text-right float-right font-weight-normal" style="font-size:18px;">R$ 7.038</span> </a></p>
+                        <br />
+        </div>
+    </div>
+                <!-- newgaspass -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1511531556004960"
+     data-ad-slot="5753030534"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+
+<style type="text/css">
+	ins.adsbygoogle {
+    	height: 100px;
+	}
+</style>
+
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-1511531556004960"
+    });
+    </script>
+            </div>
+
+        </div>
+
+    </div>
+
+<footer class="footer footer-big"   style="background: url(https://precodoscombustiveis.com.br/img/gasbg.jpg); box-shadow: inset 0 0 0 1000px rgba(22,24,37,.9);background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;">
+    <div class="container">
+
+        <div class="content">
+            <div class="row">
+                <div class="offset-1 col-10 offset-md-0 col-md-5">
+                    <h5 class="color-white">Contato</h5>
+                    <div class="">
+                        <p class="text-muted">
+                            <b>
+                                contato@precodoscombustiveis.com.br
+                            </b>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="offset-1 col-10 col-md-2">
+                    <h5 class="color-white">Sobre</h5>
+                    <ul class="links-vertical">
+                        <li>
+                            <a href="https://precodoscombustiveis.com.br/about" class="text-muted">
+                                Sobre
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://precodoscombustiveis.com.br/user-terms" class="text-muted">
+                                Termos de uso
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://precodoscombustiveis.com.br/privacy-politics" class="text-muted">
+                                Política de Privacidade
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="offset-1 col-10 offset-md-0 col-md-2">
+                    <h5 class="color-white">Países</h5>
+                    <ul class="links-vertical">
+                        <li>
+                            <a href="https://precodoscombustiveis.com.br/pt-BR/country/brasil/33" class="text-muted">
+                                Brasil
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://precodoscombustiveis.com.br/pt-BR/country/argentina/12" class="text-muted">
+                                Argentina
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://precodoscombustiveis.com.br/pt-BR/country/chile/46" class="text-muted">
+                                Chile
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://precodoscombustiveis.com.br/pt-BR/country/méxico/145" class="text-muted">
+                                México
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="offset-1 col-10 offset-md-0 col-md-2">
+                    <h5 class="color-white">Market</h5>
+                    <ul class="links-vertical">
+                            <a href=" https://br.jooble.org/" class="text-muted">
+                                Vagas 
+                            </a>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="copyright color-white">
+                <a class="nav-link text-white" href="https://blog.gaspass.com.br/" target="_blank" >
+                    <img style="width:16px;" src="https://precodoscombustiveis.com.br/img/icones__gaspass_iconeRegularBlack-duvida.svg" />
+                    &nbsp;&nbsp;Ajuda
+                </a>
+                <a class="nav-link text-white" rel="tooltip" title="Siga-nos!" data-placement="bottom" href="https://twitter.com/gaspassfuel" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                    <p class="d-lg-none d-xl-none">Twitter</p>
+                </a>
+                <a class="nav-link text-white" rel="tooltip" title="Curta nossa página!" data-placement="bottom" href="https://facebook.com/gaspassfuel" target="_blank">
+                    <i class="fab fa-facebook-square"></i>
+                    <p class="d-lg-none d-xl-none">Facebook</p>
+                </a>
+                <a class="nav-link text-white" rel="tooltip" title="Confira!" data-placement="bottom" href="https://www.instagram.com/gaspassfuel" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    <p class="d-lg-none d-xl-none">Instagram</p>
+                </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            Copyright © <script>document.write(new Date().getFullYear())</script> Preço dos Combustíveis, Todos os direitos reservados.
+        </div>
+    </div>
+</footer>
+
+<script src='https://www.google.com/recaptcha/api.js?render=6LegV4wUAAAAAOLfQ96EgUgV0fxnzeDhwK8UrmMm'></script>
+<script>
+    grecaptcha.ready(function() {
+        grecaptcha.execute('6LegV4wUAAAAAOLfQ96EgUgV0fxnzeDhwK8UrmMm', {action: 'ptbr/city/brasil/saopaulo/saopaulo/3830'}).then(function(token) {
+            // Verify the token on the server.
+        });
+        /*console.log('grecaptcha');
+        console.log(grecaptcha);*/
+    });
+</script>
+
+<script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+
+<!--   Core JS Files   -->
+
+<script src="https://precodoscombustiveis.com.br/js/core/popper.min.js" type="text/javascript"></script>
+<script src="https://precodoscombustiveis.com.br/js/core/bootstrap.min.js" type="text/javascript"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="https://precodoscombustiveis.com.br/js/plugins/bootstrap-switch.js"></script>
+<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+<script src="https://precodoscombustiveis.com.br/js/plugins/nouislider.min.js" type="text/javascript"></script>
+<!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
+<script src="https://precodoscombustiveis.com.br/js/plugins/bootstrap-datepicker.js" type="text/javascript"></script>
+<!--  Google Maps Plugin    -->
+
+<!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
+<script src="https://precodoscombustiveis.com.br/js/now-ui-kit.js?v=1.2.0" type="text/javascript"></script>
+
+
+    
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAa6umHHsUUEL8J4rj8iqf6z0_YTG6OkjU&libraries=places"></script>
+<script>
+    function setLocale(locale){
+        console.log('asdf');
+        $.ajax({
+                url: "/cookie",
+                method: 'POST',
+                data: { 'name':'locale', 'value':locale },
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                success: function(data){
+                    location.reload();
+                }
+            }
+        );
+    }
+
+    var typingTimer;
+    var i = $("#MenuSearchInput");
+
+    $('#searchUseMyLocation').on('click', function(){
+        uselocation();
+    });
+
+    function uselocation(){
+        if ("geolocation" in navigator) {
+            $('#searchUseMyLocationIcon').addClass('fa-spin');
+            navigator.geolocation.getCurrentPosition(function(position) {
+                $.ajax({
+                    url:'location',
+                    method: 'POST',
+                    data:{
+                        lat:position.coords.latitude,
+                        lng:position.coords.longitude
+                    },
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    success: function(data){
+                        window.location.replace("/my-location");
+                    },
+                    error: function(e){
+                        $('#searchUseMyLocationIcon').addClass('fa-spin');
+                    }
+                });
+                console.log(position.coords.latitude, position.coords.longitude);
+            });
+        } else {
+            alert("Location unavailable");
+        }
+    }
+
+    i.on('blur', function(e){
+        $('#MenuSearchDropdown').fadeOut();
+    });
+
+    i.on('keyup', function (e) {
+        console.log('a');
+        clearTimeout(typingTimer);
+        $('#MenuSearchLoading').hide();
+        if(i.val().length == 0) {
+            $('#MenuSearchDropdown').hide();
+        }else{
+            typingTimer = setTimeout(doneTypingMenu, 500);
+        }
+    });
+
+    function doneTypingMenu() {
+        $('#MenuSearchLoading').fadeIn();
+        $.ajax({
+                url: "/pt-BR/search/autocomplete",
+                dataType: "json",
+                data: {
+                    term: i.val()
+                },
+                success: function( data ) {
+                    $('#MenuSearchDropdown').fadeIn();
+                    $('#MenuSearchMessage').html("").hide();
+
+                    if(data.cidade.length > 0){ $('#autocompleteDivCity').fadeIn(); $('#autocompleteTableCity').html(''); }else{ $('#autocompleteDivCity').hide(); }
+                    $.each(data.cidade, function (i, v) {
+                        $('#autocompleteTableCity').append('<a class="dropdown-item" href="' + v.url + '">' + v.value + '</a>');
+                    });
+
+                    if(data.estado.length > 0){ $('#autocompleteDivState').fadeIn(); $('#autocompleteTableState').html(''); }else{ $('#autocompleteDivState').hide(); }
+                    $.each(data.estado, function(i,v){
+                        $('#autocompleteTableState').append('<a class="dropdown-item" href="'+v.url+'">'+v.value+'</a></td></tr>');
+                    });
+
+                    if(data.pais.length > 0){ $('#autocompleteDivCountry').fadeIn(); $('#autocompleteTableCountry').html(''); }else{ $('#autocompleteDivCountry').hide(); }
+                    $.each(data.pais, function(i,v){
+                        $('#autocompleteTableCountry').append('<a class="dropdown-item" href="'+v.url+'">'+v.value+'</a></td></tr>');
+                    });
+
+                    if(data.cidade.length == 0 && data.estado.length == 0 && data.pais.length == 0){
+                        $('#MenuSearchMessage').html("<b>Nenhum resultado</b>").fadeIn();
+                        //$('#MenuSearchDropdown').hide();
+                    }else{
+                        $('#MenuSearchMessage').html("").hide();
+                        $('#MenuSearchDropdown').fadeIn();
+                    }
+
+                    $('#MenuSearchLoading').fadeOut();
+                },
+                fail: function( data ) {
+                    $('#MenuSearchMessage').html("").hide();
+                    $('#MenuSearchDropdown').hide();
+                    $('#MenuSearchLoading').fadeOut();
+                },
+                error: function( data ) {
+                    $('#MenuSearchMessage').html("").hide();
+                    $('#MenuSearchDropdown').hide();
+                    $('#MenuSearchLoading').fadeOut();
+                },
+            }
+        );
+    }
+
+    function initialize(){
+        console.log('Yasd2');
+        var acInputs = document.getElementById("MenuSearchInput");
+        if(acInputs != null){
+
+            var autocomplete = new google.maps.places.Autocomplete(acInputs);
+            autocomplete.inputId = acInputs.id;
+
+            google.maps.event.addListener(autocomplete, 'place_changed', function () {
+                var place = autocomplete.getPlace();
+                if (!place.geometry) {
+                    // User entered the name of a Place that was not suggested and
+                    // pressed the Enter key, or the Place Details request failed.
+                    window.alert("No details available for input: '" + place.name + "'");
+                    return;
+                }
+                //console.log(place.geometry.location.lat());
+                console.log(place.formatted_address);
+                $.ajax({
+                    url:'/location',
+                    method: 'POST',
+                    data:{
+                        lat:place.geometry.location.lat(),
+                        lng:place.geometry.location.lng(),
+                        address:place.formatted_address
+                    },
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    success: function(data){
+                        window.location.replace("/my-location");
+                    },
+                    error: function(e){
+                        $('#searchUseMyLocationIcon').removeClass('fa-spin');
+                    }
+                });
+            });
+
+        }
+    }
+
+    initialize();
+
+    function toggleMenuSearchBox(){
+        if($(window).scrollTop() > 100){
+            $("html, body").animate({ scrollTop: "0px" });
+            $('#menuSearchBox').show();
+            $('#dowloadAppBox').hide();
+        }else{
+            if($('#menuSearchBox').is(':visible')){
+                $('#menuSearchBox').toggle();
+                $('#dowloadAppBox').toggle();
+            }else{
+                $("html, body").animate({ scrollTop: "0px" });
+                $('#menuSearchBox').toggle();
+                $('#dowloadAppBox').toggle();
+            }
+        }
+    }
+
+
+    var ratefeedback = 4;
+    $("#star_1").click(function () {
+        $("#star_1").attr('class','fas fa-star');
+        $("#star_2").attr('class','far fa-star');
+        $("#star_3").attr('class','far fa-star');
+        $("#star_4").attr('class','far fa-star');
+        $("#star_5").attr('class','far fa-star');
+        ratefeedback = 1;
+    });
+    $("#star_2").click(function () {
+        $("#star_1").attr('class','fas fa-star');
+        $("#star_2").attr('class','fas fa-star');
+        $("#star_3").attr('class','far fa-star');
+        $("#star_4").attr('class','far fa-star');
+        $("#star_5").attr('class','far fa-star');
+        ratefeedback = 2;
+    });
+    $("#star_3").click(function () {
+        $("#star_1").attr('class','fas fa-star');
+        $("#star_2").attr('class','fas fa-star');
+        $("#star_3").attr('class','fas fa-star');
+        $("#star_4").attr('class','far fa-star');
+        $("#star_5").attr('class','far fa-star');
+        ratefeedback = 3;
+    });
+    $("#star_4").click(function () {
+        $("#star_1").attr('class','fas fa-star');
+        $("#star_2").attr('class','fas fa-star');
+        $("#star_3").attr('class','fas fa-star');
+        $("#star_4").attr('class','fas fa-star');
+        $("#star_5").attr('class','far fa-star');
+        ratefeedback = 4;
+    });
+    $("#star_5").click(function () {
+        $("#star_1").attr('class','fas fa-star');
+        $("#star_2").attr('class','fas fa-star');
+        $("#star_3").attr('class','fas fa-star');
+        $("#star_4").attr('class','fas fa-star');
+        $("#star_5").attr('class','fas fa-star');
+        ratefeedback = 5;
+    });
+
+
+    $("#exampleInputEmail1").focus(function () {
+
+        $("#exampleInputEmail1").html('');
+        $("#exampleInputEmail1").text('');
+
+    });
+
+    $("#btn_submit_feedback").click(function () {
+        setTimeout(function () {$("#modal_feedback_body").html('<i class="now-ui-icons loader_refresh spin"></i>')},300);
+        // var jqxhr = $.ajax( "https://precodoscombustiveis.com.br/mail/send_feedback/Filipe/filipelopesuser@gmail.com/4/mensagemsobreosite" )
+        var jqxhr = $.ajax( "https://precodoscombustiveis.com.br/mail/send_feedback/Site/"+$('#exampleInputEmail1').val()+"/"+ratefeedback+"/"+$('exampleFormControlTextarea1').val()+"/" )
+            .done(function() {
+                // alert( "success" );
+                setTimeout(function () {$("#modal_feedback_body").html('<p>Agradecemos o seu contato.</p>')},500);
+            })
+            .fail(function() {
+                // alert( "error" );
+                setTimeout(function () {$("#modal_feedback_body").html('<p>Agradecemos o seu contato.</p>')},500);
+            })
+            .always(function() {
+                // alert( "complete" );
+                setTimeout(function () {$("#btn_close_feedback").click()},2000);
+            });
+    });
+
+    $( "#exampleFormControlTextarea1" ).focus(function() {
+        $( "#exampleFormControlTextarea1" ).html('');
+        $( "#exampleFormControlTextarea1" ).text('');
+    });
+
+
+    setTimeout(function () {
+        $("#star_1").attr('class','fas fa-star');
+        $("#star_2").attr('class','fas fa-star');
+        $("#star_3").attr('class','fas fa-star');
+        $("#star_4").attr('class','fas fa-star');
+        $("#star_5").attr('class','far fa-star');
+    },1500);
+
+</script>
+<script>
+
+        function setFuel(fuel, text){
+            $.ajax({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    url: "/cookie",
+                    method: 'POST',
+                    data: { 'name':'fuel', 'value':fuel },
+                    success: function(data) {
+                        $('#btnFuel').html(text);
+                        location.reload();
+                    }
+                }
+            );
+        }
+
+        $('#btnDistance').on('click', function(e){
+            setOrder("distance", $('#btnDistance').text());
+        });
+
+        $('#btnPrice').on('click', function(e){
+            setOrder("price_value", $('#btnPrice').text());
+        });
+
+        function setOrder(order, text){
+            $.ajax({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    url: "/cookie",
+                    method: 'POST',
+                    data: { 'name':'order', 'value':order },
+                    success: function(data) {
+                        $('#btnOrder').html(text);
+                        location.reload();
+                    }
+                }
+            );
+        }
+
+        $('#refreshAddress').on('click', uselocation);
+
+        function uselocation(){
+            if ("geolocation" in navigator) {
+                $('#refreshAddressIcon').addClass('fa-spin');
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    $.ajax({
+                        url:'location',
+                        method: 'POST',
+                        data:{
+                            lat:position.coords.latitude,
+                            lng:position.coords.longitude
+                        },
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        },
+                        success: function(data){
+                            window.location.replace("/my-location");
+                        },
+                        error: function(e){
+                            $('#refreshAddressIcon').removeClass('fa-spin');
+                        }
+                    });
+                    console.log(position.coords.latitude, position.coords.longitude);
+                });
+            } else {
+                alert("Location unavailable");
+            }
+        }
+    </script>
+
+<!-- advertising 3444smHB46jNgNBZxjf7MF2kgNMVGNv5M7S7GSsqxXrT4VHdMsd9qz55Bsn5IoV0ZarK_QM9UMYN8yUimEgjfA==-->
+                            <script data-cfasync="false" type="text/javascript" id="clever-core">
+                                    (function (document, window) {
+                                        var a, c = document.createElement("script");
+
+                                        c.id = "CleverCoreLoader49018";
+                                        c.src = "//scripts.cleverwebserver.com/6a10f542e6f79265c34a405dbc928e37.js";
+
+                                        c.async = !0;
+                                        c.type = "text/javascript";
+                                        c.setAttribute("data-target", window.name);
+                                        c.setAttribute("data-callback", "put-your-callback-macro-here");
+
+                                        try {
+                                            a = parent.document.getElementsByTagName("script")[0] || document.getElementsByTagName("script")[0];
+                                        } catch (e) {
+                                            a = !1;
+                                        }
+
+                                        a || (a = document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]);
+                                        a.parentNode.insertBefore(c, a);
+                                    })(document, window);
+                                </script> 
+                                <!-- end advertising -->
+    
+</body>
+
+</html>
